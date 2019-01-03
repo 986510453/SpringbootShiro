@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link  href="css/login.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>欢迎登录</h1>
+<h1 th:if="${msg != null }" th:text="${msg}" style="color: red"></h1>
+<form action="login" method="post" target="_parent">
+    <div class="wrap" id="wrap">
+        <div class="logGet">
+            <!-- 头部提示信息 -->
+            <div class="logD logDtip">
+                <p class="p1">登录</p>
+            </div>
+            <!-- 输入框 -->
+            <div class="lgD">
+                <input type="text" name="username"
+                       placeholder="输入邮箱地址" />
+            </div>
+            <div class="lgD">
+                <input type="password" name="password"
+                       placeholder="输入用户密码" />
+            </div>
+            <input type="checkbox" name="rememberMe" />记住我<br/>
+            <div class="logC">
+                <button type="submit">登 录</button>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
